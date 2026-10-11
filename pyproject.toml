@@ -1,0 +1,22 @@
+[project]
+name = "numpy-review"
+version = "0.1.0"
+description = "Модуль численных алгоритмов обработки массивов на numpy"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=src --cov-report=html:reports/coverage"
+
+[tool.pylint.main]
+max-line-length = 100
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".venv", "__pycache__"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
